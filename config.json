@@ -1,0 +1,4 @@
+{
+  "HUGGINGFACE_API_KEY": "hf_your_key_here",
+  "TWOCAPTCHA_API_KEY": "your_2captcha_key_here"
+}
