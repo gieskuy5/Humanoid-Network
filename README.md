@@ -1,40 +1,38 @@
-# 🤖 Humanoid Network Bot
+# 🤖 HUMANOID Network Bot
 
-Automated bot for Humanoid Network - Create accounts and run daily training tasks. Dont Forget To Join My Channel For More Updates https://t.me/+inuri73xqzYzNzll
+Automated bot for Humanoid Network (HAN) - Create accounts, daily training, and earn points.
 
-## 📋 Features
+## ✨ Features
 
-- **Account Creation**: Automatically create new accounts with referral codes
-- **Daily Training**: Submit models and datasets to earn points
-- **Proxy Support**: Rotate through proxies for each account
-- **Auto Retry**: Handles server errors with exponential backoff
-- **Twitter Username**: Auto-generates and sets Twitter usernames
+- **📝 Create New Accounts** - Auto-generate wallets and register with referral code
+- **🎓 Daily Training** - Submit AI models/datasets to earn points
+- **🔄 Multi-threaded** - Support parallel processing for faster operations
+- **🌐 Proxy Support** - Use proxies for each account
+- **🔐 TLS Bypass** - Uses curl_cffi for anti-bot bypass
 
-## 🚀 Quick Start
+## 📋 Requirements
 
 ```bash
-python main.py
+pip install eth-account curl_cffi
 ```
 
-## 📁 Files
+## 📁 File Structure
 
-| File | Description |
-|------|-------------|
-| `main.py` | Main script with menu (recommended) |
-| `bot.py` | Account creation only |
-| `daily.py` | Daily training only |
-| `config.json` | API keys configuration |
-| `wallet.json` | Saved wallet credentials |
-| `accounts.json` | Full account data |
-| `proxy.txt` | Proxy list (optional) |
+```
+HUMANOID/
+├── main.py              # Main bot script
+├── config.json          # HuggingFace API key config
+├── wallet.json          # Generated wallets storage
+├── proxy.txt            # Proxy list (optional)
+└── README.md
+```
 
 ## ⚙️ Configuration
 
 ### config.json
 ```json
 {
-  "HUGGINGFACE_API_KEY": "hf_your_key_here",
-  "TWOCAPTCHA_API_KEY": "your_2captcha_key_here"
+  "HUGGINGFACE_API_KEY": "hf_xxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
 ```
 
@@ -45,51 +43,23 @@ host:port:user:pass
 host:port
 ```
 
-## 📖 Menu Options
-
-1. **Create New Accounts**
-   - Asks for proxy usage (y/n)
-   - Number of accounts (1-100)
-   - Referral code
-   - Saves to `wallet.json` and `accounts.json`
-
-2. **Run Daily Training**
-   - Loads wallets from `wallet.json`
-   - Submits 3 models + 3 datasets per account
-   - Auto-waits until next daily reset (00:00 UTC)
-   - Continuous loop with random offset
-
-3. **Exit**
-
-## 📦 Requirements
+## 🚀 Usage
 
 ```bash
-pip install requests eth-account
+py main.py
 ```
 
-## 🔧 Usage Examples
+### Menu Options:
+1. **Create New Accounts** - Generate new wallets and register
+2. **Run Daily Training** - Submit AI models/datasets for points
+3. **Exit**
 
-### Create 10 accounts with proxy
-```
-Select option: 1
-Use proxy? (y/n): y
-How many accounts: 10
-Referral code: YOUR_CODE
-```
+## 📝 Notes
 
-### Run daily training
-```
-Select option: 2
-Use proxy? (y/n): y
-```
+- Wallets are saved automatically to `wallet.json`
+- Training submits models from HuggingFace
+- Use proxies for large-scale operations
 
-## ⚠️ Notes
+## 📞 Contact
 
-- Create `proxy.txt` in the same folder before using proxy feature
-- First run creates `config.json` - edit with your API keys
-- Daily training runs continuously until stopped (Ctrl+C)
-- Wallets are saved automatically after each account creation
-
-## 📄 License
-
-For educational purposes only.
+Telegram: https://t.me/MDFKOfficial
